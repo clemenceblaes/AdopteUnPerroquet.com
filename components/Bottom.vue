@@ -1,53 +1,27 @@
 <template>
-  <div class="bottom">
-    <div class="logo col-4"></div>
-    <div class="contact col-4">
-      ADOPTEUNPERROQUET.COM<br />
-      Le site de rencontre entre éleveurs, associations et particuliers.<br />
-      Contact : hello@adopteunperroquet.com
-    </div>
-    <div class="menu col-4">
-      <li><router-link to="/">Acceuil</router-link></li>
-      <li><router-link to="/about">About</router-link></li>
-      <li><router-link to="/auth">Mon compte</router-link></li>
-    </div>
-  </div>
+  <v-footer color="#709255" padless>
+    <v-row justify="center" no-gutters>
+      <v-btn
+        v-for="link in links"
+        :key="link"
+        color="white"
+        text
+        rounded
+        class="my-2"
+      >
+        {{ link }}
+      </v-btn>
+      <v-col class="black lighten-2 py-4 text-center white--text" cols="12">
+        {{ new Date().getFullYear() }} — <strong>AdopteUnPerroquet.com</strong>
+      </v-col>
+    </v-row>
+  </v-footer>
 </template>
 
 <script>
 export default {
-  name: "Bottom",
+  data: () => ({
+    links: ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"],
+  }),
 };
 </script>
-
-<style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
-
-a {
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  color: #709255;
-}
-
-.bottom {
-  width: 100%;
-  display: flex;
-}
-
-.logo {
-  background: url("https://zupimages.net/up/20/51/zath.png");
-  background-size: cover;
-  height: 200px;
-}
-
-.contact,
-.menu {
-  margin: auto;
-}
-
-.menu {
-  text-transform: uppercase;
-  list-style: none;
-}
-</style>
