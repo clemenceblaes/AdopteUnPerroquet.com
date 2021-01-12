@@ -148,11 +148,11 @@ const getters = {
 };
 const setters = {
     setGuideEmpty: function () {
-        state.test.length = 0;
+        state.guide.length = 0;
     }
 };
 const mutations = {
-    RESET_TEST(state) {
+    RESET_GUIDE(state) {
         Vue.set(state, 'guide', initialState.test)
     },
 };
