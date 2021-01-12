@@ -24,21 +24,18 @@
           <form>
             <v-text-field
               id="firstInput"
-              v-model="pseudonyme"
               label="Pseudonyme"
               required
               color="#709255"
             ></v-text-field>
             <v-text-field
               id="mail"
-              v-model="mail"
               label="E-mail"
               required
               color="#709255"
             ></v-text-field>
             <v-text-field
               id="mail2"
-              v-model="mail2"
               label="Confirmez votre e-mail"
               required
               color="#709255"
@@ -71,14 +68,16 @@
 
         <v-btn class="next" color="#709255" @click="e1 = 2"> Continuer </v-btn>
 
-        <v-btn class="cancel" text>Annuler </v-btn>
+        <v-btn class="cancel" text
+          ><router-link to="/"> Annuler </router-link></v-btn
+        >
       </v-stepper-content>
 
       <v-stepper-content step="2">
         <v-card class="mb-12" color="grey lighten-1" height="600px">
           <form>
-            <v-text> Vous êtes : </v-text>
-            <v-radio-group v-model="ex7" row>
+            <p>Vous êtes :</p>
+            <v-radio-group row>
               <v-radio
                 label="Particulier"
                 color="#709255"
@@ -98,39 +97,33 @@
 
             <v-text-field
               id="name"
-              v-model="name"
               label="Nom"
               required
               color="#709255"
             ></v-text-field>
             <v-text-field
               id="firstname"
-              v-model="firstName"
               label="Prenom"
               required
               color="#709255"
             ></v-text-field>
             <v-text-field
               id="associationName"
-              v-model="associationName"
               label="Nom de l'association"
               color="#709255"
             ></v-text-field>
             <v-text-field
               id="adresse"
-              v-model="adress"
               label="Adresse"
               color="#709255"
             ></v-text-field>
             <v-text-field
               id="postalCode"
-              v-model="postalCode"
               label="Code Postal"
               color="#709255"
             ></v-text-field>
             <v-text-field
               id="city"
-              v-model="city"
               label="Ville"
               color="#709255"
             ></v-text-field>
@@ -139,15 +132,18 @@
 
         <v-btn class="next" color="#709255" @click="e1 = 3"> Continuer </v-btn>
 
-        <v-btn class="cancel" text> Annuler </v-btn>
+        <v-btn class="cancel" text
+          ><router-link to="/"> Annuler </router-link></v-btn
+        >
       </v-stepper-content>
 
       <v-stepper-content step="3">
         <v-card class="mb-12" color="grey lighten-1" height="300px">
           <v-container>
-            <v-text></v-text>
+            <p></p>
             <v-checkbox
-              v-model="checkbox1"
+              color="#709255"
+              v-model="checkbox"
               label="J'accepte les termes du règlement"
             ></v-checkbox>
           </v-container>
@@ -157,7 +153,9 @@
           Créer le compte
         </v-btn>
 
-        <v-btn class="cancel" text> Annuler </v-btn>
+        <v-btn class="cancel" text
+          ><router-link to="/"> Annuler </router-link></v-btn
+        >
       </v-stepper-content>
     </v-stepper-items>
   </v-stepper>
@@ -198,6 +196,11 @@ form {
 }
 .next {
   color: white;
+}
+
+a {
+  color: #709255 !important;
+  text-decoration: none;
 }
 
 .v-application .grey.lighten-1 {

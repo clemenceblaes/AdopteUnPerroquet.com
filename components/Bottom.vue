@@ -1,6 +1,6 @@
 <template>
   <v-footer color="#709255" padless>
-    <v-row justify="center" no-gutters>
+    <v-row class="bottomMenu" justify="center" no-gutters>
       <v-btn
         v-for="link in links"
         :key="link"
@@ -12,7 +12,8 @@
         {{ link }}
       </v-btn>
       <v-col class="black lighten-2 py-4 text-center white--text" cols="12">
-        {{ new Date().getFullYear() }} — <strong>AdopteUnPerroquet.com</strong>
+        {{ new Date().getFullYear() }} —
+        <strong>&copy; AdopteUnPerroquet.com</strong>
       </v-col>
     </v-row>
   </v-footer>
@@ -20,8 +21,24 @@
 
 <script>
 export default {
+  name: "Bottom",
   data: () => ({
-    links: ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"],
+    links: [
+      "Accueil",
+      "A propos de nous",
+      "Législation",
+      "Mentions légales",
+      "Blog",
+      "Nous contacter",
+    ],
   }),
 };
 </script>
+
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;700&display=swap");
+
+.bottomMenu {
+  font-family: "Baloo Thambi 2", sans-serif;
+}
+</style>

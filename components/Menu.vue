@@ -1,27 +1,28 @@
 <template>
-  <v-app-bar dense dark color="#709255" class="pa-0 menu">
-    <v-row>
-      <v-col class="d-flex justify-space-around">
-        <v-toolbar-title class="white--text">{{ title }}</v-toolbar-title>
-      </v-col>
-      <v-col cols="2" class="text-center"
-        ><router-link to="/"> Acceuil</router-link>
-      </v-col>
-      <v-col cols="2" class="text-center"
-        ><router-link to="/parrots">Les perroquets</router-link></v-col
-      >
-      <v-col cols="2" class="text-center"
-        ><router-link to="/"> Législation</router-link></v-col
-      >
-      <v-col cols="2" class="text-center"
-        ><router-link to="/"> Mon Compte</router-link></v-col
-      >
-      <v-col class="d-flex justify-space-around">
-        <v-toolbar-title class="white--text">{{ title }}</v-toolbar-title>
-      </v-col>
-      <router-view />
-    </v-row>
-  </v-app-bar>
+  <v-container fluid>
+    <v-app-bar dense dark color="#709255" class="pa-0" width="100%">
+      <v-row>
+        <v-col class="d-flex justify-space-around">
+          <v-toolbar-title class="white--text"></v-toolbar-title>
+        </v-col>
+        <v-col cols="2" class="text-center"
+          ><router-link to="/"> Acceuil</router-link>
+        </v-col>
+        <v-col cols="2" class="text-center"
+          ><router-link to="/parrots">Les perroquets</router-link></v-col
+        >
+        <v-col cols="2" class="text-center"
+          ><router-link to="/"> Législation</router-link></v-col
+        >
+        <v-col cols="2" class="text-center"
+          ><router-link to="/"> Mon Compte</router-link></v-col
+        >
+        <v-col class="d-flex justify-space-around">
+          <v-toolbar-title class="white--text"></v-toolbar-title>
+        </v-col>
+      </v-row>
+    </v-app-bar>
+  </v-container>
 </template>
 
 
@@ -32,10 +33,13 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;700&display=swap");
+
 .v-application a {
   color: white;
   font-size: 24px;
   text-decoration: none;
+  font-family: "Baloo Thambi 2", sans-serif;
 }
 a {
   position: relative;
