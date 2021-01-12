@@ -1,7 +1,7 @@
 import { Store } from "vuex";
 
 const initialState = {
-    test: {},
+    guide: {},
 }
 
 const state = {
