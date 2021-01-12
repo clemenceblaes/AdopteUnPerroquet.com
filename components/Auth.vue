@@ -1,44 +1,65 @@
 <template>
-  <div>
-    <div class="col-2 reg">
+  <v-container>
+    <v-row>
       <form>
-        <p>
-          Se connecter :
-          <input type="text" name="pseudonyme" placeholder="Pseudonyme" />
-          <input type="password" name="password" placeholder="Mot de passe" />
-          <button>Se connecter</button>
-        </p>
+        <v-text-field
+          v-model="pseudonyme"
+          label="Pseudonyme"
+          required
+          color="#709255"
+        ></v-text-field>
+        <v-text-field
+          v-model="password"
+          label="Mot de passe"
+          required
+          color="#709255"
+        ></v-text-field>
+        <v-checkbox label="Se souvenir de moi" color="#709255"></v-checkbox>
+
+        <v-btn class="mr-4 button"> Se connecter </v-btn>
       </form>
-    </div>
-  </div>
+    </v-row>
+    <v-row class="mt-10 justify-center">
+      <p class="text-center" id="newAccount">
+        Vous n'avez pas encore de compte ? <br />
+        <router-link to="/newAccount">Créer un compte</router-link>
+      </p></v-row
+    >
+  </v-container>
 </template>
 
 <script>
 export default {
   name: "reg",
+  data() {
+    return {
+      pseudonyme: "Nyumélia",
+      password: "Test",
+    };
+  },
 };
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;700&display=swap");
+
+form {
+  width: 20%;
+  margin: 5% auto auto auto;
+  font-family: "Baloo Thambi 2", sans-serif;
+}
 
 p {
-  color: white;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+  font-family: "Baloo Thambi 2", sans-serif;
 }
 
-input {
-  margin: 2% 0 2% 0;
+a {
+  text-decoration: none;
+  color: #709255 !important;
 }
 
-button {
-  margin-top: 2%;
-}
-
-.reg {
-  margin: 3% auto auto auto;
-  font-family: "Roboto", sans-serif;
+.button {
+  width: 100%;
+  font-family: "Baloo Thambi 2", sans-serif;
 }
 </style>
