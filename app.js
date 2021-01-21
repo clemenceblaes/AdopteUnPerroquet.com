@@ -6,9 +6,7 @@ import VueRouter from 'vue-router';
 import Store from "./store";
 import MainCarousel from "./components/Carousels/MainCarousel.vue";
 import ParrotMenu from "./components/Views/ParrotMenuView.vue";
-import littleParrots from "./components/Views/LittleParrotsView.vue";
-import mediumParrots from "./components/Views/MediumParrotsView.vue";
-import largeParrots from "./components/Views/largeParrotsView.vue";
+import ParrotsType from "./components/Views/ParrotsType.vue";
 import Guide from "./components/Guide.vue";
 import Auth from "./components/Auth.vue";
 import NewAccount from "./components/newAccount.vue";
@@ -26,16 +24,8 @@ const routes = [
         component: ParrotMenu,
     },
     {
-        path: "/littleParrots",
-        component: littleParrots,
-    },
-    {
-        path: "/mediumParrots",
-        component: mediumParrots,
-    },
-    {
-        path: "/largeParrots",
-        component: largeParrots,
+        path: "/parrotsType",
+        component: ParrotsType,
     },
     {
         path: "/guide",
