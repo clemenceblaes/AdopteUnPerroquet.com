@@ -1,16 +1,19 @@
 <template>
   <v-footer color="#709255" padless>
     <v-row class="bottomMenu" justify="center" no-gutters>
-      <v-btn
-        v-for="link in links"
-        :key="link"
-        color="white"
-        text
-        rounded
-        class="my-2"
+      <v-col sm="12" class="text-center"
+        ><v-btn
+          justify="center"
+          v-for="link in links"
+          :key="link"
+          color="white"
+          text
+          rounded
+          class="my-2"
+        >
+          {{ link }}
+        </v-btn></v-col
       >
-        {{ link }}
-      </v-btn>
       <v-col class="black lighten-2 py-4 text-center white--text" cols="12">
         {{ new Date().getFullYear() }} —
         <strong>&copy; AdopteUnPerroquet.com</strong>
@@ -25,11 +28,11 @@ export default {
   data: () => ({
     links: [
       "Accueil",
-      "A propos de nous",
-      "Législation",
-      "Mentions légales",
+      "Nos perroquets",
+      "Règlementation",
       "Blog",
-      "Nous contacter",
+      "Contact",
+      "Mentions légales",
     ],
   }),
 };
