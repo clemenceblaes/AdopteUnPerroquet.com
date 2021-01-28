@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <v-app-bar app color="#1f1d1d" dark height="125">
-      <v-col id="logo" class="d-flex" height="125"> </v-col>
+      <v-col cols="5" id="logo" class="d-flex mt-10" height="125"> </v-col>
 
       <v-spacer></v-spacer>
 
@@ -64,33 +64,26 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;700&display=swap");
 
-@media screen and (min-width: 200px) and (max-width: 640px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   #logo {
-    background: url("https://zupimages.net/up/21/04/wq0l.jpg") !important;
-    background-size: cover !important;
-    margin: auto !important;
-    height: 120px !important;
-  }
-
-  .account,
-  .account:hover {
-    font-size: 0.7rem !important;
-    padding: 0 !important;
+    margin-top: -26px !important;
   }
 }
 
 /* Media queries Galaxy Fold, and Surface Duo */
-@media only screen and (min-width: 280px) and (max-width: 280px) {
+@media screen and (min-width: 540px) and (max-width: 540px) {
   #logo {
-    margin: auto auto auto -20px !important;
-    width: 200% !important;
+    margin-top: 0px !important;
   }
 }
 
-@media only screen and (min-width: 540px) and (max-width: 540px) {
+@media screen and (min-width: 280px) and (max-width: 280px) {
   #logo {
-    width: 200% !important;
-    margin-top: -30px !important;
+    margin-top: 60px !important;
+  }
+
+  .v-application ul {
+    padding-left: 0px !important;
   }
 }
 
@@ -99,14 +92,11 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   height: 150px;
-  margin: -30px auto auto 30px;
 }
 
-.account,
-.account:hover {
-  color: white;
+.v-application a {
   font-family: "Baloo Thambi 2", sans-serif;
-  text-decoration: none;
+  color: #709255;
 }
 </style>
 
