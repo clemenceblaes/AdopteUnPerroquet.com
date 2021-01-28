@@ -64,7 +64,7 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;700&display=swap");
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
   #logo {
     margin-top: -26px !important;
   }
