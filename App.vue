@@ -3,10 +3,9 @@
     <navbar :app="this" class="mb-2"></navbar>
 
     <spinner v-if="loading"></spinner>
-    <div v-else-if="initiated"><router-view :app="this" /></div>
-    <v-footer class="mt-6" color="#709255" padless
-      ><bottombar id="bottombar"
-    /></v-footer>
+
+    <v-main v-else-if="initiated"><router-view :app="this" /></v-main>
+    <Bottombar />
   </v-app>
 </template>
 
@@ -48,4 +47,9 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;700&display=swap");
+
+.v-application {
+  font-family: "Baloo Thambi 2", sans-serif;
+}
 </style>
