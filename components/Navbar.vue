@@ -95,8 +95,8 @@ export default {
 }
 
 .v-application a {
-  font-family: "Baloo Thambi 2", sans-serif;
   color: #709255;
 }
 </style>
+
 
