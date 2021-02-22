@@ -38,6 +38,11 @@ class CreateParrotTable extends Migration
                     ->on('parrot_subspecies')
                     ->onDelete('restrict')
                     ->onUpdate('restrict');
+            $table->foreign('id_breeding_type')
+                    ->references('id')
+                    ->on('breeding_type')
+                    ->onDelete('cascade')
+                    ->onUpdate('cascade');
             $table->foreign('id_parrot_legislation')
                     ->references('id')
                     ->on('parrot_legislation')
@@ -45,10 +50,10 @@ class CreateParrotTable extends Migration
                     ->onUpdate('restrict');
             $table->unsignedBigInteger('id_parrot_temper');
             $table->foreign('id_parrot_temper')
-                        ->references('id')
-                        ->on('parrot_temper')
-                        ->onDelete('cascade')
-                        ->onUpdate('cascade');
+                    ->references('id')
+                    ->on('parrot_temper')
+                    ->onDelete('cascade')
+                    ->onUpdate('cascade');
             $table->unsignedBigInteger('id_parrot');
             $table->foreign('id_parrot')
                     ->references('id')
